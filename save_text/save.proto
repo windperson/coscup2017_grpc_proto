@@ -1,0 +1,20 @@
+// Proto file for saving gcp speech to text recoginzed result.
+
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+package coscup2017demo.saveing;
+
+service SaveTextService {
+    rpc SaveResult (SaveResultRequest) returns (SaveResultResponse);
+}
+
+message SaveResultRequest {
+    int32 clientId = 1;
+    string recognized = 2;
+    Timestamp timestamp = 3;
+}
+
+message SaveResultResponse {
+}
