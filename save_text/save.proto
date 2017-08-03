@@ -4,7 +4,7 @@ syntax = "proto3";
 
 import "google/protobuf/timestamp.proto";
 
-package coscup2017demo.saveing;
+package coscup2017demo.saving;
 
 service SaveTextService {
     rpc SaveResult (SaveResultRequest) returns (SaveResultResponse);
@@ -13,7 +13,7 @@ service SaveTextService {
 message SaveResultRequest {
     int32 clientId = 1;
     string recognized = 2;
-    Timestamp timestamp = 3;
+    google.protobuf.Timestamp timestamp = 3;
 }
 
 message SaveResultResponse {
