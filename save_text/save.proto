@@ -7,14 +7,14 @@ import "google/protobuf/timestamp.proto";
 package coscup2017demo.saving;
 
 service SaveTextService {
-    rpc SaveResult (SaveResultRequest) returns (SaveResultResponse);
+    rpc SaveResult (SaveResultRequest) returns (stream SaveResultResponse);
 }
 
 message SaveResultRequest {
-    int32 clientId = 1;
-    string recognized = 2;
-    google.protobuf.Timestamp timestamp = 3;
 }
 
 message SaveResultResponse {
+    int32 clientId = 1;
+    string recognized = 2;
+    google.protobuf.Timestamp timestamp = 3;
 }
