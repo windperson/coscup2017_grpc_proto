@@ -6,7 +6,7 @@ This proto file(s) have using Google predefined Common Data Type:
 1. Clone [protobuf source](https://github.com/google/protobuf) to an arbitrary location, like ~/include/prtobuf .
 
 2. Invoke protoc cli tool:  
-protoc -I ~/include/protobuf/src/ -I ./proto --go_out=plugins=grpc:proto ./proto/coscup2017_grpc_proto/save_text/*.proto
+protoc -I ~/include/protobuf/src/ -I ./proto --go_out=plugins=grpc:. ./proto/coscup2017_grpc_proto/save_text/*.proto
 
 ## Generate C# code:
 
